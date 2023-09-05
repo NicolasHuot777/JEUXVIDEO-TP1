@@ -25,6 +25,8 @@ public class AnimalSpawner : MonoBehaviour
         
     }
 
+    //un commentaire
+
     void SpawnRandomAnimals()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);

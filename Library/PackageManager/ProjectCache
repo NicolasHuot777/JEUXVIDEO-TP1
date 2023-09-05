@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638294730708091935
-    m_Hash: 3458619208
+      ticks: 638294734280164892
+    m_Hash: 2026101887
   m_LockFileStatus:
     m_FilePath: C:/Users/nicol/OneDrive/Bureau/JEUXVIDEO-TP1/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638294730716285374
-    m_Hash: 3199334231
+      ticks: 638294734280174872
+    m_Hash: 2453299360
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
