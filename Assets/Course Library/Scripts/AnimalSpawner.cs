@@ -5,10 +5,12 @@ using UnityEngine;
 public class AnimalSpawner : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
-    public float zTopRangeSpawn = 20;
-    public float zBottomRangeSpawn = -5;
-    public float startDelay = 2;
-    public float spawnInterval = 2.5f;
+    private float zTopSpawnRangePosition = 20;
+    private float zBottomSpawnRangePosition = -5;
+    private float ySpawnPosition = 0;
+    private float xSpawnPosition = 18;
+    private float startDelay = 2;
+    private float spawnInterval = 2.5f;
 
 
     // Start is called before the first frame update
@@ -26,7 +28,7 @@ public class AnimalSpawner : MonoBehaviour
     void SpawnRandomAnimals()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Vector3 spawnPosition = new Vector3(zBottomRangeSpawn, 0, Random.Range(zTopRangeSpawn, zBottomRangeSpawn));
+        Vector3 spawnPosition = new Vector3(xSpawnPosition, ySpawnPosition, Random.Range(zTopSpawnRangePosition, zBottomSpawnRangePosition));
         Instantiate(animalPrefabs[animalIndex], spawnPosition, animalPrefabs[animalIndex].transform.rotation);
     }
 }
