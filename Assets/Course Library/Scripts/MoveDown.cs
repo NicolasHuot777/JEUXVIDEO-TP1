@@ -6,14 +6,14 @@ using UnityEngine.Networking.Types;
 public class MoveDown : MonoBehaviour
 {
     public float bottomBoundZ = -10;
-    public float startPositionZ = 10f;
-    public float resetPosition = 30;
+    private float repeatWidth;
     private Vector3 startingPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         startingPosition = transform.position;
+        repeatWidth = GetComponent<BoxCollider>().size.z / 2f;
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class MoveDown : MonoBehaviour
             
         }*/
 
-        if(transform.position.z < startPositionZ - resetPosition)
+        if(transform.position.z < startingPosition.z - 50)
         {
             transform.position = startingPosition;
         }
