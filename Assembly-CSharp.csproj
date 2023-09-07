@@ -61,6 +61,7 @@
     <Compile Include="Assets\Course Library\Scripts\AnimalController.cs" />
     <Compile Include="Assets\Course Library\Scripts\AnimalSpawner.cs" />
     <Compile Include="Assets\Course Library\Scripts\MoveDown.cs" />
+    <Compile Include="Assets\Course Library\Scripts\GameOverTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />

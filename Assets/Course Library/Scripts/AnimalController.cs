@@ -6,15 +6,16 @@ using UnityEngine.UIElements;
 public class AnimalController : MonoBehaviour
 {
 
-    public float speed = 15.0f;
+    private float speed = 15.0f;
     private float maxBound = 20.0f;
     private bool isGoingRightDown = false;
     public GameObject gameObject;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,20 +37,20 @@ public class AnimalController : MonoBehaviour
 
         //Ajuste la trajectoire de l'animal.
         if (isGoingRightDown) {
-            transform.Translate(new Vector3(0.75f, 0, 1) * speed * Time.deltaTime);
+            transform.Translate(new Vector3(0, 0, 1) * speed * Time.deltaTime);
 
         } else
         {
-            transform.Translate(new Vector3(-0.75f, 0, 1) * speed * Time.deltaTime);
+            transform.Translate(new Vector3(0, 0, 1) * speed * Time.deltaTime);
         }
     }
 
 
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
-        Destroy(other.gameObject);
+        if (collision.gameObject.CompareTag("Pizza"))
+        {
+
+        }
     }
-
-
 }

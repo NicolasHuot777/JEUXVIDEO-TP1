@@ -354,6 +354,7 @@
 "Assets/Course Library/Scripts/AnimalController.cs"
 "Assets/Course Library/Scripts/AnimalSpawner.cs"
 "Assets/Course Library/Scripts/FoodController.cs"
+"Assets/Course Library/Scripts/GameOverTrigger.cs"
 "Assets/Course Library/Scripts/MoveDown.cs"
 "Assets/Course Library/Scripts/PlayerController.cs"
 -langversion:9.0
