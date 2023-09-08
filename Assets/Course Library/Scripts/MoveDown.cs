@@ -12,7 +12,7 @@ public class MoveDown : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         startingPosition = transform.position;
         repeatWidth = GetComponent<BoxCollider>().size.z / 2f;
     }

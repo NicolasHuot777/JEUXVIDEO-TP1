@@ -5,8 +5,8 @@ using UnityEngine.UIElements;
 
 public class AnimalController : MonoBehaviour
 {
-
-    private float speed = 15.0f;
+ 
+    private float speed = 5.0f;
     private float maxBound = 20.0f;
     private bool isGoingRightDown = false;
     public GameObject gameObject;
@@ -16,6 +16,7 @@ public class AnimalController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        Manger();
     }
 
     // Update is called once per frame
@@ -45,12 +46,9 @@ public class AnimalController : MonoBehaviour
         }
     }
 
-
-    private void OnCollisionEnter(Collision collision)
+    public void Manger()
     {
-        if (collision.gameObject.CompareTag("Pizza"))
-        {
-
-        }
+        animator.SetBool("isEating", true);
+        Debug.Log("Je mange l'animal.");
     }
 }
