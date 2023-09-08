@@ -5,7 +5,7 @@ using UnityEngine.Networking.Types;
 
 public class FoodController : MonoBehaviour
 {
-    private float speed = 40.0f;
+    private float speed = 10.0f;
     private float topBound = 30.0f;
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class FoodController : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision détectée");
-        Destroy(gameObject);
+         Destroy(gameObject);
         if (other.gameObject.CompareTag("Animal"))
         {
             other.gameObject.SendMessage("Manger");
