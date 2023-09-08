@@ -16,7 +16,6 @@ public class AnimalController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        Manger();
     }
 
     // Update is called once per frame

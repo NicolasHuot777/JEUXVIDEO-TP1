@@ -29,13 +29,13 @@ public class FoodController : MonoBehaviour
         //Détecte une potentielle colission.
        
     }
-    public void OnTrigger(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Animal"))
+        Debug.Log("Collision détectée");
+        Destroy(gameObject);
+        if (other.gameObject.CompareTag("Animal"))
         {
-            Debug.Log(collision.gameObject);
-            Destroy(gameObject);
-            collision.gameObject.SendMessage("Manger");
+            other.gameObject.SendMessage("Manger");
         }
     }
 }
