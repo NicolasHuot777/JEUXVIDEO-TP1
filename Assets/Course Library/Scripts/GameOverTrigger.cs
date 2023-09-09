@@ -21,6 +21,5 @@ public class GameOverTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         isGameOver = true;
-
     }
 }

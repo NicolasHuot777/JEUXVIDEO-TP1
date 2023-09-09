@@ -66,7 +66,8 @@ public class PlayerController : MonoBehaviour
 
         if (GameOverTrigger.isGameOver)
         {
-            playerAnim.SetTrigger("Death_01");
+            playerAnim.SetBool("Death_b", true);
+            playerAnim.SetInteger("DeathType_int", 2);
             playerAudio.PlayOneShot(deadSong, 0.2f);
         }
     }

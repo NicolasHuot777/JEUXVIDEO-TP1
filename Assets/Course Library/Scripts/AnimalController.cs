@@ -27,7 +27,6 @@ public class AnimalController : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, 180, 0));
             isGoingRightDown = true;
-
         }
         else if (transform.position.x > maxBound)
         {
@@ -47,7 +46,6 @@ public class AnimalController : MonoBehaviour
 
     public void Manger()
     {
-        animator.SetBool("isEating", true);
-        Debug.Log("Je mange l'animal.");
+        animator.Play("Eat");
     }
 }
